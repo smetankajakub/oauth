@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "oauth-cf55f": {
+      "hosting": {
+        "oauth": [
+          "oauth-cf55f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "oauth-cf55f"
+  }
+}

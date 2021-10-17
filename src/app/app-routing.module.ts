@@ -1,11 +1,11 @@
 import {
     AngularFireAuthGuard,
     redirectUnauthorizedTo,
-  } from '@angular/fire/auth-guard';
+  } from '@angular/fire/compat/auth-guard';
   import { NgModule } from '@angular/core';
   import { Routes, RouterModule } from '@angular/router';
   
-  import { BASE, CREATE, FEED } from './consts/routes.const';
+  import { BASE, CREATE, FEED } from '../app/consts/router.consts';
   import { CreateComponent } from './components/create/create.component';
   import { FeedComponent } from './components/feed/feed.component';
   

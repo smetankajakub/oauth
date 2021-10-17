@@ -4,16 +4,16 @@ import { EMPTY, Observable, of } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
-import { AuthService } from '../../services/auth.service';
-import { FEED } from './../../consts/routes.const';
+import { AuthService } from '../../services/auth/auth.service';
+import { FEED } from './../../consts/router.consts';
 
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  templateUrl: './header.component.html'
+  // styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  user$: Observable<firebase.User> = this.auth.user$;
+  user$: Observable<firebase.default.User> | null = this.auth.user$;
 
   constructor(
     private readonly auth: AuthService,

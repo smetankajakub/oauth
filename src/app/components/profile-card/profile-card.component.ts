@@ -6,7 +6,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./profile-card.component.scss'],
 })
 export class ProfileCardComponent {
-  @Input() user: firebase.User;
+  @Input()
+  user!: firebase.default.User;
   @Output() logoutClick: EventEmitter<null> = new EventEmitter<null>();
 
   logout() {
