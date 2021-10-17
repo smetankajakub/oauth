@@ -8,6 +8,7 @@ import {
   import { BASE, CREATE, FEED } from '../app/consts/router.consts';
   import { CreateComponent } from './components/create/create.component';
   import { FeedComponent } from './components/feed/feed.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
   
   const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo([FEED]);
   
@@ -27,6 +28,11 @@ import {
       canActivate: [AngularFireAuthGuard],
       data: { authGuardPipe: redirectUnauthorizedToLogin },
     },
+    {
+        path:'**',
+        pathMatch: 'full',
+        component: PageNotFoundComponent
+    }
   ];
   
   @NgModule({
